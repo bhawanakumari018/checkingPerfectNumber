@@ -14,13 +14,13 @@ public class PerfectNumberController {
     private PerfectNumberService perfectNumberService;
 
     @GetMapping("/checkPerfectNumber/{number}")
-    public boolean getArticle(@PathVariable("number") int number) {
+    public boolean getPerfectNumber(@PathVariable("number") int number) {
 
         return perfectNumberService.isPerfectNumber(number);
     }
 
     @GetMapping("/checkPerfectNumberInRange/{range}")
-    public ArrayList<Integer> getArticle(@PathVariable("range") String range) {
+    public ArrayList<Integer> getPerfectNumberRange(@PathVariable("range") String range) {
 
         return perfectNumberService.findingPerfectNumbersInRange(range);
     }
